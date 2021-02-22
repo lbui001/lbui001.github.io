@@ -1,0 +1,8 @@
+{
+	"whatsNewUri": "",
+	"isInternal": false,
+	"canCollectPII": false,
+	"nativeAuthFlow": true,
+	"showLauncherError": true,
+	"anonymousAuthReloadFlag": null
+}
