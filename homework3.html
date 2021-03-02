@@ -2,41 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>CSC 235 forms demo</title>
+    <title>Meet my Poodle</title>
 </head>
 <body>
-    <h1>CSC 235 forms demo</h1>
+    <h1>Meet my Poodle</h1>
     <h2>GET form</h2>
-    <form method="GET" action="https://moodle.converse.edu/CSC235/formecho.php"
-            id="getform" name="getform">
+    <form method= "GET" action="https://moodle.converse.edu/CSC235/formecho.php"
+            id= "getform" name= "getform">
         <fieldset>
-            <legend>Silly questions</legend>
-            <label for="getname">What is your name?</label>
+            <legend>Introduce your Poodle</legend>
+            <label for="getname">Their name is:</label>
                 <input type="text" id="getname" name="name"/>
-            <br /><label for="getquest">What is your quest?</label>
-                <input type="text" id="getquest" name="quest"/>
-            <br /><label for="getcolor">What is your favorite color?</label>
+            <br /><label for="getgender">Their gender:</label>
+                <input type="text" id="getgender" name="gender"/>
+            <br /><label for="getage">Age?</label>
+                <input type="text" id="getage" name="age"/>
+            <br /><label for="getcolor">Color?</label>
             <select id="getcolor" name="color">
-                <option value=""> &mdash; Select a color &mdash; </option>
-                <option>Red</option>
-                <option>Blue</option>
-                <option>Green</option>
-                <option value="AAAAUUUGGGHHH!">I don't know!</option>
+                <option value=""> &mdash; Select Color &mdash; </option>
+            <optgroup label="Solid Color">
+                <option>White</option>
+                <option>Black</option>
+                <option>Chocolate</option>
+                <option>Apricot</option>
+                <option>Sable</option>
+            </optgroup>
+            <optgroup label="Parti">
+                <option>Black & White</option>
+                <option>Chocolate & White</option>
+                <option>Apricot & White</option>
+                <option>Sable & White</option>
+            </optgroup>
             </select>
+            <br /><p>Size?</p>
+            <input type="radio" id="getstandard" name="size" value="Standard" />
+                <label for="getstandard">Standard</label><br />
+            <input type="radio" id="getminiature" name="size" value="miniature"/>
+                <label for="getminiature">Miniature</label><br />
+            <input type="radio" id="gettoy" name="size" value="toy" />
+                <label for="gettoy">Toy</label><br />
         </fieldset>
         <fieldset>
-            <legend>Biographical information</legend>
-            <label for="getusername">Username:</label>
-                <input type="text" id="getusername" name="username" /><br />
-            <label for="getpassword">Password (not really):</label>
-                <input type="password" id="getpassword" name="password" value="insecure" /><br />
-            <label for="getbirthdate">Birth date:</label>
-                <input type="date" id="getbirthdate" name="birthdate" /><br />
+            <legend>Fun Facts about your Poodle</legend>
+            <label for="getnickname">Nickname?:</label>
+                <input type="text" id="getnickname" name="nickname" /><br />
+            <label for="getmicrochip">Microchip number:</label>
+                <input type="password" id="getmicrochip" name="microchip" value="insecure" /><br />
+            <label for="getbirthday">Birthday:</label>
+                <input type="date" id="getbirthday" name="birthday" /><br />
+            <label for="getfacts">Additional facts:</label><br />
+            <textarea id="getfacts" name="fun facts" rows="10" cols="80">Anything else you want to share about your poodle?</textarea><br />
         </fieldset>
         <fieldset>
-            <legend>Random questions unrelated to grails</legend>
-            <label for="getcomplaints">Complaints:</label><br />
-            <textarea id="getcomplaints" name="complaints" rows="10" cols="80">Initial contents for the user to (usually) remove</textarea><br />
+            <legend>Cutemeter</legend>
             <datalist id="tickmarks">
                 <option value="0" label="0%"></option>
                 <option value="10"></option>
@@ -50,25 +68,14 @@
                 <option value="90"></option>
                 <option value="100" label="100%"></option>
             </datalist>
-            <label for="getvol">Volume of complaints:</label>
-                <input type="range" min="0" max="100" id="getvol" 
-                    list="tickmarks" name="volume" /><br />
-            <label for="gettemp">Outside temperature (&deg;F):</label>
-                <input type="number" min="10" max="110" step="1" /><br />
-            <label>In terms of &ldquo;20 Questions&rdquo;, I am:</label><br />
-            <input type="radio" id="getanimal" name="classification" value="animal" />
-                <label for="getanimal">Animal</label><br />
-            <input type="radio" id="getvegetable" name="classification" value="vegetable"/>
-                <label for="getvegetable">Vegetable</label><br />
-            <input type="radio" id="getmineral" name="classification" value="mineral" />
-                <label for="getmineral">Mineral</label><br />
-            <input type="hidden" value="unseen data" id="gethidden" name="hidden" />
+            <label for="getcute">How cute is your poodle?</label>
+                <input type="range" min="0" max="100" id="getcute" 
+                    list="tickmarks" name="cuteness" /><br />
         </fieldset>
         <fieldset>
-            <legend>Legal</legend>
-            <input type="checkbox" id="getkidneys" name="go_ahead_take_my_kidneys" />
-                <label for="getkidneys">I have pretended to read and agree to the dense legal text
-                    that gives your lawyers rights to important internal organs.</label>
+            <legend>Verification</legend>
+            <input type="checkbox" id="getverified" name="verifyme" />
+                <label for="getverified">I verify that all of these answers hold truth to my poodle.</label>
         </fieldset>
         <br /><input type="submit" /><input type="reset" />
     </form>
@@ -76,52 +83,59 @@
     <form method="POST" action="https://moodle.converse.edu/CSC235/formecho.php"
             id="postform" name="postform">
         <fieldset>
-            <legend>Silly questions</legend>
-            <label for="postname">What is your name?</label>
+            <legend>Introduce your Poodle</legend>
+            <label for="postname">Their name is:</label>
                 <input type="text" id="postname" name="name"/>
-            <br /><label for="postquest">What is your quest?</label>
-                <input type="text" id="postquest" name="quest"/>
-            <br /><label for="postcolor">What is your favorite color?</label>
-            <select id="postcolor" name="color">
-                <option value=""> &mdash; Select a color &mdash; </option>
-                <option>Red</option>
-                <option>Blue</option>
-                <option>Green</option>
-                <option value="AAAAUUUGGGHHH!">I don't know!</option>
+            <br /><label for="postgender">Their gender:</label>
+                <input type="text" id="postgender" name="gender"/>
+            <br /><label for="postage">Age?</label>
+                <input type="text" id="postage" name="age"/>
+            <br /><label for="postcolor">Color?</label>
+            <select id= "postcolor" name="color">
+                <option value=""> &mdash; Select Color &mdash; </option>
+            <optgroup label="Solid Color">
+                <option>White</option>
+                <option>Black</option>
+                <option>Chocolate</option>
+                <option>Apricot</option>
+                <option>Sable</option>
+            </optgroup>
+            <optgroup label="Parti">
+                <option>Black & White</option>
+                <option>Chocolate & White</option>
+                <option>Apricot & White</option>
+                <option>Sable & White</option>
+            </optgroup>
             </select>
+            <br /><p>Size?</p>
+            <input type="radio" id= "poststandard" name="size" value="Standard" />
+                <label for= "poststandard">Standard</label><br />
+            <input type="radio" id= "postminiature" name="size" value="miniature"/>
+                <label for= "postminiature">Miniature</label><br />
+            <input type="radio" id= "posttoy" name="size" value="toy" />
+                <label for= "posttoy">Toy</label><br />
         </fieldset>
         <fieldset>
-            <legend>Biographical information</legend>
-            <label for="postusername">Username:</label>
-                <input type="text" id="postusername" name="username" /><br />
-            <label for="postpassword">Password (not really):</label>
-                <input type="password" id="postpassword" name="password" value="insecure" /><br />
-            <label for="postbirthdate">Birth date:</label>
-                <input type="date" id="postbirthdate" name="birthdate" /><br />
+            <legend>Fun Facts about your Poodle</legend>
+            <label for= "postnickname">Nickname?:</label>
+                <input type="text" id= "postnickname" name="nickname" /><br />
+            <label for= "postmicrochip">Microchip number:</label>
+                <input type="password" id= "postmicrochip" name="microchip" value="insecure" /><br />
+            <label for= "postbirthday">Birthday:</label>
+                <input type="date" id= "postbirthday" name="birthday" /><br />
+            <label for= "postfacts">Additional facts:</label><br />
+            <textarea id= "postfacts" name="fun facts" rows="10" cols="80">Anything else you want to share about your poodle?</textarea><br />
         </fieldset>
         <fieldset>
-            <legend>Random questions unrelated to grails</legend>
-            <label for="postcomplaints">Complaints:</label><br />
-            <textarea id="postcomplaints" name="complaints" rows="10" cols="80">Initial contents for the user to (usually) remove</textarea><br />
-            <label for="postvol">Volume of complaints:</label>
-                <input type="range" min="0" max="100" id="postvol" 
-                    list="tickmarks" name="volume" /><br />
-            <label for="posttemp">Outside temperature (&deg;F):</label>
-                <input type="number" min="10" max="110" step="1" /><br />
-            <label>In terms of &ldquo;20 Questions&rdquo;, I am:</label><br />
-            <input type="radio" id="postanimal" name="classification" value="animal" />
-                <label for="postanimal">Animal</label><br />
-            <input type="radio" id="postvegetable" name="classification" value="vegetable"/>
-                <label for="postvegetable">Vegetable</label><br />
-            <input type="radio" id="postmineral" name="classification" value="mineral" />
-                <label for="postmineral">Mineral</label><br />
-            <input type="hidden" value="unseen data" id="posthidden" name="hidden" />
+            <legend>Cutemeter</legend>
+            <label for= "postcute">How cute is your poodle?</label>
+                <input type="range" min="0" max="100" id= "postcute" 
+                    list="tickmarks" name="cuteness" /><br />
         </fieldset>
         <fieldset>
-            <legend>Legal</legend>
-            <input type="checkbox" id="postkidneys" name="go_ahead_take_my_kidneys" />
-                <label for="postkidneys">I have pretended to read and agree to the dense legal text
-                    that gives your lawyers rights to important internal organs.</label>
+            <legend>Verification</legend>
+            <input type="checkbox" id= "postverified" name="verifyme" />
+                <label for= "postverified">I verify that all of these answers hold truth to my poodle.</label>
         </fieldset>
         <br /><input type="submit" value="Submit via POST"/><input type="reset" />
     </form>
