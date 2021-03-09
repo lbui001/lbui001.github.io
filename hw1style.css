@@ -1,0 +1,19 @@
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: deeppink;
+}
+
+/* Style data attached by ID attribute */
+#Note {
+    border-right: thin solid;
+}
+
+/* Style data attached by class attribute */
+.note {
+    font-style: italic;
+}
+
+.h1 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
