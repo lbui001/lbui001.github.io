@@ -21,6 +21,7 @@ ul.poodlelist {
     list-style-type: square;
 }
 
-ol.poodlelist li:first-of-type {
+ol.poodlelist {
     list-style-type: upper-latin;
 }
+
