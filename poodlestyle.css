@@ -6,7 +6,6 @@ div {
 /* Style data attached by ID attribute */
 #Note {
     border-right: thin solid;
-    padding: 75px;
 }
 
 /* Style data attached by class attribute */
@@ -37,6 +36,8 @@ h3.two {
 
 h3.three {
     border: thick double chocolate;
+    padding: 50px;
+    margin: 50px;
 }
 
 ol {
