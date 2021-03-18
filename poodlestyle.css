@@ -29,10 +29,12 @@ div {
   
 ul.poodlelist {
     list-style-type: square;
+    margin: 50px;
 }
 
 ol.poodlelist {
     list-style-type: upper-latin;
+    margin: 50px;
 }
 
 h3.one {
@@ -49,7 +51,4 @@ h3.three {
     padding: 50px;
 }
 
-ol {
-    margin: 50px;
-}
 
