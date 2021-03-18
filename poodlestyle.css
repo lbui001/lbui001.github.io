@@ -31,7 +31,7 @@ h3.one {
 
 h3.two {
     border: thick dashed white;
-    padding: 50px 50px 50px 50px;
+    padding: 50px;
 }
 
 h3.three {
@@ -39,6 +39,6 @@ h3.three {
 }
 
 ol {
-    margin: 50px 50px 50px 50px;
+    margin: 50px;
 }
 
