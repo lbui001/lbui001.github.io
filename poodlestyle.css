@@ -6,6 +6,7 @@ div {
 /* Style data attached by ID attribute */
 #Note {
     border-right: thin solid;
+    padding: 75px;
 }
 
 /* Style data attached by class attribute */
