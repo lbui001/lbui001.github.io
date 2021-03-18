@@ -18,5 +18,5 @@ div {
   }
   
 ul.poodlelist {
-    list-style: square url("sqpurple.gif");
+    list-style-type: square;
 }
