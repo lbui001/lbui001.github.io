@@ -25,3 +25,18 @@ ol.poodlelist {
     list-style-type: upper-latin;
 }
 
+h3.one {
+    border: thin dotted deepskyblue;
+}
+
+h3.two {
+    border: thick dashed white;
+}
+
+h3.three {
+    border: thick double chocolate;
+}
+
+ol {
+    margin: 50px 50px 50px 50px;
+}
