@@ -51,4 +51,6 @@ h3.three {
     padding: 50px;
 }
 
-
+span.sup {
+    vertical-align: super;
+}
