@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AKC Non-Sporting Group</title>
+    <script src="HW7.js"></script>
+</head>
+<body>
+
+    <h1>AKC Non-Sporting Group Breed Lottery!</h1>
+    <input type="button" value= "Start Lottery!" onclick="Background('darkturquoise');"><br><br>
+
+    <button onclick="breeds()">Reveal breeds!</button>
+        <p><em>Introducing today's lottery breeds: AKC Non-Sporting Group Edition:</em></p>
+        <p id="breeds"></p>
+
+    
+    <p>Click the button to be randomly assigned a breed:
+    <button onclick="breednumber()">Give me my breed!</button>
+    <p id="breednumber"></p>
+
+    <div id="time_target"></div>
+    <script>
+        document.write('<p><b>Congratulations!</b><br>This is your breed as of: ' + (new Date()) + '.</p>');
+    </script>
+    <noscript>Time.</noscript>
+
+<p><em>The chances of getting your desired breed today is:</em>
+    <button onclick='chances()'>Reveal %</button>
+    <p id="chances"></p>
+
+<script src="HW7.js"></script>
+</body>
+</html>
