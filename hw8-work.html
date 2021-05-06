@@ -39,8 +39,8 @@
 	</style>
 	<script>
 function validForm(formElt) {
-    let valid = validColors(formElt.querySelector('div.colors')) && valid;
-    return valid;
+    let checkboxes = formElt.querySelectorAll('input[type=checkbox]');
+    return numberChecked(checkboxes) > 0
 }
 
 function validColors(parentElt) {
